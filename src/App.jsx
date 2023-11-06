@@ -1,6 +1,8 @@
 import { useEffect, useState } from "react";
 import { Link, Routes, Route } from "react-router-dom";
 
+import HireForm from "./pages/PersonProfile/components/HireForm";
+
 import "./App.css";
 
 import Dashboard from "./pages/Dashboard";
@@ -23,7 +25,7 @@ export default function App() {
       </header>
 
       <Routes>
-        <Route path="/view/:id" element={<PersonProfile />} />
+        <Route path="/view/:id" element={<PersonProfile setHiredPeople={setHiredPeople}/>} />
         <Route path="/" element={<Dashboard hiredPeople={hiredPeople} />} />
       </Routes>
     </>

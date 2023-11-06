@@ -5,6 +5,7 @@ function PersonProfile(props) {
   const linkedPerson= useLocation().state.person  
   const [person, setPerson] = useState(null)
 
+  const {setHiredPeople} = props
 
   useEffect( () =>{
     setPerson(linkedPerson);
@@ -18,7 +19,7 @@ function PersonProfile(props) {
       <h2>
         {person.name.first} {person.name.last}
       </h2>
-      <HireForm person={person} />
+      <HireForm person={person} setHiredPeople={setHiredPeople}/>
     </article>
   )
     

@@ -8,7 +8,6 @@ function Dashboard(props) {
   const { hiredPeople } = props
   const [people, setPeople] = useState([])
 
-
   function obtainApplicants() {
     fetch(`${BASE_URL}?${NUM_RESULTS}`)
       .then((response) => response.json())
